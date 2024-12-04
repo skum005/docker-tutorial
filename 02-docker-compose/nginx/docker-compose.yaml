@@ -1,0 +1,6 @@
+services:
+  nginx-service:
+    image: nginx
+    container_name: nginx_local
+    ports:
+    - 8050:80	

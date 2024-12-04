@@ -1,0 +1,12 @@
+services:
+  nginx_service:
+    image: nginx
+    ports:
+    - 80:80
+    container_name: nginx_alp
+  alpine_service:
+    image: alpine
+    container_name: alp_ng
+    entrypoint: ping nginx_service
+    depends_on: 
+    - nginx_service
